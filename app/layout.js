@@ -1,5 +1,5 @@
 "use client";
-import { Poppins, Lato } from "next/font/google";
+import { Poppins, Lato, Mulish } from "next/font/google";
 import "./styles/globals.css";
 
 const poppins = Poppins({
@@ -12,10 +12,15 @@ const lato = Lato({
   subsets: ["latin"],
 });
 
+const mulish = Mulish({
+  subsets: ["latin"],
+  weight: ["300", "400", "700", "900"],
+});
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${poppins.className} antialiased`}>{children}</body>
+      <body className={`${mulish.className} antialiased`}>{children}</body>
     </html>
   );
 }
