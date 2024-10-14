@@ -14,7 +14,7 @@ const lato = Lato({
 
 const mulish = Mulish({
   subsets: ["latin"],
-  weight: ["300", "400", "700", "900"],
+  weight: ["300", "400", "600", "700", "800", "900"],
 });
 
 export default function RootLayout({ children }) {
