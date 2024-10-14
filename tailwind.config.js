@@ -7,6 +7,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      backgroundImage: {
+        hero: "url('/assets/HomePage/HeroSection/Background.png')",
+      },
       spacing: {
         1200: "1200px",
       },
