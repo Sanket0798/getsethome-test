@@ -1,3 +1,4 @@
+"use client"
 import React from "react";
 import Image from "next/image";
 
@@ -62,7 +63,7 @@ const About = () => {
         </div>
 
         <div className="flex flex-row w-[575px] h-full">
-          <div className="flex flex-col">{imgGroup1.map((value, index) => (
+          {/* <div className="flex flex-col">{imgGroup1.map((value, index) => (
             <div key={index}>
               <Image
               // width={20}
@@ -73,7 +74,7 @@ const About = () => {
               src={value.img}
               />
             </div>
-          ))}</div>
+          ))}</div> */}
         </div>
       </section>
     </div>
