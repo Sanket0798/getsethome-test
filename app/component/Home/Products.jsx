@@ -49,9 +49,8 @@ const Products = () => {
             <Image
               width={180}
               height={74}
-              src="/assets/HomePage/Products/googlePlay.jpg"
+              src="/assets/HomePage/Products/googlePlay.png"
               alt="googlePlay"
-              className="mb-[5px]"
             />
           </div>
         </div>
