@@ -60,7 +60,7 @@ const About = () => {
                 className="object-cover"
               />
             </div>
-            <div className="absolute bottom-[150px] left-6 w-[282px] h-[260px] aspect-square rounded-full overflow-hidden">
+            <div className="relative top-[300px] w-[282px] h-[260px] aspect-square rounded-full overflow-hidden">
               <Image
                 src="/assets/HomePage/About/all-inclusive-rent.png"
                 alt="Person holding smartphone"
@@ -69,7 +69,7 @@ const About = () => {
                 className="object-cover"
               />
             </div>
-            <div className="absolute bottom-[200px] right-[50px] w-1/4 aspect-square rounded-full overflow-hidden">
+            <div className="relative left-[370px] top-[100px] w-1/4 aspect-square rounded-full overflow-hidden">
               <Image
                 src="/assets/HomePage/About/rental.png"
                 alt="Person with braided hair"
