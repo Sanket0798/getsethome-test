@@ -4,8 +4,8 @@ import { LifestyleCard } from "../ui/LifestyleCard";
 
 const LifeStyle = () => {
   return (
-    <section className="w-1200 h-[942px] mx-auto py-[60px]">
-      <h2 className="absolute text-[42px] w-[560px] leading-[50px] font-extrabold">
+    <section className="hidden lg:block lg:w-1200 h-[942px] mx-auto py-[60px] px-[10px] md:px-[20px] lg:px-0">
+      <h2 className="absolute md:text-[42px] w-[360px] md:w-[560px] md:leading-[50px] font-extrabold text-[35px] leading-[40px]">
         Discover Homes as unique as your{" "}
         <span className="text-[#6B31E7]">lifestyle</span>
         <br />
@@ -13,7 +13,7 @@ const LifeStyle = () => {
           Explore curated homes for
         </span>
       </h2>
-      <div className="grid grid-cols-6 gap-x-[15px] h-full">
+      <div className="hidden lg:grid lg:grid-cols-6 lg:gap-x-[15px] lg:h-full">
         <div className="w-full h-[685px] flex items-end justify-center">
           <LifestyleCard
             image="/assets/HomePage/LifeStyle/Img8.jpg"
