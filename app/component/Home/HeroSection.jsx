@@ -9,11 +9,11 @@ const HeroSection = () => {
     <div className="relative">
       <div className="bg-no-repeat bg-hero w-full bg-cover bg-center h-[690px]">
         <div className="max-w-[1200px] w-full mx-auto flex flex-col items-center justify-between h-full">
-          <h1 className="font-extrabold text-[42px] text-black text-center leading-[50px] mt-[40px]">
+          <h1 className="font-extrabold text-[35px] md:text-[42px] text-black text-center leading-[40px] md:leading-[50px] mt-[40px]">
             Student Accommodation, <br />
             Near your College Location
           </h1>
-          <div className="w-full h-[508px] flex items-end justify-between">
+          <div className="w-full h-[508px] flex md:items-center md:justify-center lg:items-end lg:justify-between">
             <Image
               src="/assets/HomePage/HeroSection/Img5.png"
               alt="Student accommodation"
@@ -22,7 +22,7 @@ const HeroSection = () => {
               className="object-cover z-10"
               priority
             />
-            <div className="flex flex-col items-start gap-y-[20px] w-[600px] h-full">
+            <div className="hidden lg:flex flex-col items-start gap-y-[20px] w-[600px] h-full">
               {HeroItems.map((value) => (
                 <div
                   key={value.title}
