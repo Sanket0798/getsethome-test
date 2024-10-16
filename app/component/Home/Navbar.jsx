@@ -16,7 +16,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-white w-full h-[75px] flex items-center shadow-[0_3px_10px_0_rgba(0,0,0,.05)]">
+    <nav className="bg-white w-full h-[75px] flex items-center shadow-[0_3px_10px_0_rgba(0,0,0,.05)] px-[10px] md:px-[20px] lg:px-0">
       <div className="w-1200 mx-auto flex justify-between items-center">
         <Image
           src="/assets/HomePage/Navbar/Logo.png"
@@ -26,21 +26,21 @@ const Navbar = () => {
           priority
         />
         <div className="flex items-center justify-end gap-x-[18px]">
-          <button className="flex items-center justify-center w-[137px] h-[40px] rounded-full bg-[rgba(107,49,231,.1)] gap-x-[5px]">
+          <button className="hidden lg:flex items-center justify-center w-[137px] h-[40px] rounded-full bg-[rgba(107,49,231,.1)] gap-x-[5px]">
             <NavbarPhoneSVG />
             <p className="text-[#555555] hover:text-[#6b31e7] text-[14px] font-extrabold">
               8080 900 300
             </p>
           </button>
-          <button className="flex items-center justify-between gap-x-[5px] w-[72px] h-[18px] font-extrabold">
+          <button className="hidden md:flex items-center justify-between gap-x-[5px] w-[72px] h-[18px] font-extrabold">
             <p className="text-[14px] text-[#555]">Mumbai</p>
             <DownArrowSVG />
           </button>
-          <p className="hover:text-[#6b31e7] text-[14px] font-extrabold cursor-pointer text-[#555]">
+          <button className="hover:text-[#6b31e7] text-[14px] font-extrabold cursor-pointer text-[#555] hidden md:flex">
             List Your Property
-          </p>
+          </button>
           <GradientButton text="Sign Up" width="72px" height="35px" />
-          <button onClick={toggleSidePanel} aria-label="Open menu">
+          <button onClick={toggleSidePanel} aria-label="Open menu" className="md:hidden lg:block">
             <NavbarMenuSVG />
           </button>
         </div>
