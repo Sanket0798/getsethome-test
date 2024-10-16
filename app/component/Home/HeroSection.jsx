@@ -24,7 +24,7 @@ const HeroSection = () => {
               {HeroItems.map((value, index) => (
                 <>
                   <div
-                    key={index}
+                    key={value.id || `item-${index}`}
                     className="flex flex-row items-center justify-between gap-x-[10px]"
                   >
                     <div className="w-[80px] h-[80px] bg-[#DDDDDD] rounded-full flex item justify-center">
