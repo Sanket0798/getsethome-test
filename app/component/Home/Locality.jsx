@@ -50,39 +50,33 @@ const Locality = () => {
           style={{ transform: `translateX(-${currentSlide * 100}%)` }}
         >
           {locations.map((location, index) => (
-            // <div key={index} className="w-[380px] flex-shrink-0">
-            //   <Image
-            //     src={location.image}
-            //     alt={location.title}
-            //     width={380}
-            //     height={230}
-            //     className="object-cover rounded-[30px]"
-            //   />
-            //   <div className="absolute top-0 text-center w-[380px] h-[230px] flex flex-col justify-between pt-[35px] px-[20px] pb-[20px]">
-            //     <h2 className="text-[45px]  font-extrabold">{location.title}</h2>
-            //     <p className="text-md">{location.rooms}</p>
-            //   </div>
-            // </div>
-
-            <div key={index} className="w-[380px] h-[230px] flex-shrink-0 relative rounded-[30px] overflow-hidden">
-            <Image
-              src={location.image}
-              alt={location.title}
-              width={380}
-              height={230}
-              className="object-cover absolute inset-0"
-            />
-            <div className="absolute inset-0 bg-white bg-opacity-70"></div>
-            <div className="absolute inset-0 flex flex-col justify-between pt-[35px] px-[20px] pb-[20px]">
-              <h2 className="text-[45px] font-extrabold text-transparent bg-clip-text bg-center bg-cover"
+            <div
+              key={index}
+              className="w-[380px] h-[230px] flex-shrink-0 relative rounded-[30px] overflow-hidden group"
+            >
+              <Image
+                src={location.image}
+                alt={location.title}
+                width={380}
+                height={230}
+                className="object-cover absolute inset-0 transition-transform duration-300 ease-in-out group-hover:scale-110"
+              />
+              <div className="absolute inset-0 bg-white bg-opacity-90"></div>
+              <div className="absolute inset-0 flex flex-col justify-between pt-[35px] px-[20px] pb-[20px]">
+                <h2
+                  className="text-[45px] font-extrabold text-transparent bg-clip-text bg-center bg-cover h-[90px] leading-[42px] text-center transition-all duration-300 ease-in-out"
                   style={{
                     backgroundImage: `url(${location.image})`,
-                  }}>
-                {location.title}
-              </h2>
-              <p className="text-md text-black">{location.rooms}</p>
+                    backgroundSize: "100% 100%",
+                  }}
+                >
+                  {location.title}
+                </h2>
+                <p className="text-[16px] font-extrabold text-center text-[rgba(0,0,0,.8)]">
+                  {location.rooms}
+                </p>
+              </div>
             </div>
-          </div>
           ))}
         </div>
 
@@ -98,7 +92,7 @@ const Locality = () => {
         </button>
         <button
           onClick={handleNext}
-          className={`absolute top-1/2 right-2 transform -translate-y-1/2 w-[40px] h-[40px] p-2 bg-purple-500 text-white rounded-full hover:bg-purple-700 transition-colors duration-300 ${
+          className={`absolute top-1/2 right-5 transform -translate-y-1/2 w-[40px] h-[40px] p-2 bg-purple-500 text-white rounded-full hover:bg-purple-700 transition-colors duration-300 ${
             currentSlide === locations.length - 1
               ? "opacity-50 cursor-not-allowed"
               : ""
