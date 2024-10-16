@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import Image from "next/image";
+import Slider from "react-slick";
 
 const locations = [
   {
@@ -80,7 +81,6 @@ const Locality = () => {
           ))}
         </div>
 
-        {/* Navigation Buttons */}
         <button
           onClick={handlePrev}
           className={`absolute top-1/2 left-0 z-10 transform -translate-y-1/2 w-[40px] h-[40px] p-2 bg-purple-500 text-white rounded-full hover:bg-purple-700 transition-colors duration-300 ${
