@@ -1,21 +1,7 @@
 "use client";
 import React from "react";
 import Image from "next/image";
-
-const aboutContent = [
-  {
-    title: "No Brokerage Homes",
-    desc: "Renting a new home can be financially draining with hefty deposits, furnishings, and brokerage fees. That's why we offer a budget-friendly solution with No brokerage homes, a fully furnished accommodation and a minimal deposit of two months' rent.",
-  },
-  {
-    title: "All-Inclusive Rent",
-    desc: "GetSetHome rent packages are inclusive of complementary bills like WiFi, DTH, Gas and housekeeping services*. We make it easier for you to plan & budget your living expenses and remove the hassles of managing separate payments or worrying about additional costs.",
-  },
-  {
-    title: "Best Budget Accommodations",
-    desc: "GetSetHome homes are fully furnished with a living area, functional kitchen & modern appliances. You can simply move in with your luggage and choose to rent an entire house, a private room or shared rooms like Twin or Triple Sharing. We cater to a wide range of budgets, ensuring there's something suitable for everyone.",
-  },
-];
+import { aboutContent } from "@/app/utils/Data";
 
 const About = () => {
   return (
@@ -26,58 +12,53 @@ const About = () => {
             Reduce your rental expense with{" "}
             <span className="text-[#6B31E7]">GetSetHome</span>
           </p>
-          {aboutContent.map((value, index) => (
-            <>
-              <div key={index} className="w-[575px]">
-                <h4 className="text-[24px] text-black font-extrabold mt-[40px] mb-[15px] h-[28px]">
-                  {value.title}
-                </h4>
-                <p className="text-[14px] text-[#555] leading-[25px]">
-                  {value.desc}
-                </p>
-              </div>
-            </>
+          {aboutContent.map(({ title, desc }, index) => (
+            <div key={index} className="w-[575px]">
+              <h4 className="text-[24px] text-black font-extrabold mt-[40px] mb-[15px] h-[28px]">
+                {title}
+              </h4>
+              <p className="text-[14px] text-[#555] leading-[25px]">{desc}</p>
+            </div>
           ))}
         </div>
 
         <div className="flex flex-row w-[575px] h-full">
-          <div className="relative w-full h-screen ">
-            <div className="absolute top-14 left-[100px] w-1/4 aspect-square rounded-full overflow-hidden">
-              <Image
-                src="/assets/HomePage/About/budget-accommodations.png"
-                alt="Person sitting"
-                width={200}
-                height={200}
-                className="object-cover"
-              />
-            </div>
-            <div className="absolute right-[5px] w-[282px] h-[307px] aspect-square rounded-full overflow-hidden">
-              <Image
-                src="/assets/HomePage/About/no-brokerage-homes.png"
-                alt="Person walking"
-                width={400}
-                height={400}
-                className="object-cover"
-              />
-            </div>
-            <div className="relative top-[300px] w-[282px] h-[260px] aspect-square rounded-full overflow-hidden">
-              <Image
-                src="/assets/HomePage/About/all-inclusive-rent.png"
-                alt="Person holding smartphone"
-                width={400}
-                height={400}
-                className="object-cover"
-              />
-            </div>
-            <div className="relative left-[370px] top-[100px] w-1/4 aspect-square rounded-full overflow-hidden">
-              <Image
-                src="/assets/HomePage/About/rental.png"
-                alt="Person with braided hair"
-                width={200}
-                height={200}
-                className="object-cover"
-              />
-            </div>
+          <div className="relative w-full h-screen">
+            {[
+              {
+                src: "/assets/HomePage/About/budget-accommodations.png",
+                alt: "Person sitting",
+                className: "absolute top-14 left-[100px] w-1/4",
+              },
+              {
+                src: "/assets/HomePage/About/no-brokerage-homes.png",
+                alt: "Person walking",
+                className: "absolute right-[5px] w-[282px] h-[307px]",
+              },
+              {
+                src: "/assets/HomePage/About/all-inclusive-rent.png",
+                alt: "Person holding smartphone",
+                className: "relative top-[300px] w-[282px] h-[260px]",
+              },
+              {
+                src: "/assets/HomePage/About/rental.png",
+                alt: "Person with braided hair",
+                className: "relative left-[370px] top-[100px] w-1/4",
+              },
+            ].map((image, index) => (
+              <div
+                key={index}
+                className={`${image.className} aspect-square rounded-full overflow-hidden`}
+              >
+                <Image
+                  src={image.src}
+                  alt={image.alt}
+                  width={400}
+                  height={400}
+                  className="object-cover"
+                />
+              </div>
+            ))}
           </div>
         </div>
       </section>

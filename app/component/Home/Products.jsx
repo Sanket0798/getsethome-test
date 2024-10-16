@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import Image from "next/image";
+import { GradientButton } from "../ui/Button";
 
 const Products = () => {
   const [phone, setPhone] = useState("");
@@ -39,9 +40,11 @@ const Products = () => {
                     className="flex-grow bg-transparent py-[15px] px-[20px] font-medium text-[12px] text-white placeholder-gray-300 focus:outline-none"
                     required
                   />
-                  <button className="flex items-center justify-center uppercase text-white bg-gradient-to-r from-[#981fc9] to-[#4522b3] w-[113px] h-[45px] rounded-full text-[12px] font-extrabold hover:shadow-[0_18px_40px_-12px_rgba(107,49,231,.35)] ">
-                    Send Link
-                  </button>
+                  <GradientButton
+                    text="Send Link"
+                    width="113px"
+                    height="45px"
+                  />
                 </div>
               </form>
             </div>
@@ -65,9 +68,11 @@ const Products = () => {
               your property to potential leads, managing compliance, we&apos;ll
               be there with you at every step of the way.
             </p>
-            <button className="flex items-center justify-center uppercase text-white bg-gradient-to-r from-[#981fc9] to-[#4522b3] w-[190px] h-[45px] rounded-full text-[12px] font-extrabold hover:shadow-[0_18px_40px_-12px_rgba(107,49,231,.35)]">
-              List Your Property
-            </button>
+            <GradientButton
+              text="List your Property"
+              width="190px"
+              height="45px"
+            />
           </div>
 
           <div className="md:w-1/3 mt-8 md:mt-0 relative">

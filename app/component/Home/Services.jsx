@@ -1,45 +1,5 @@
-import {
-  AccommodationSVG,
-  ApplianceSVG,
-  ConvenienceSVG,
-  HouseKeepingSVG,
-  SafetySVG,
-  ServiceRequestSVG,
-} from "@/public/assets/HomePage/Svg";
 import React from "react";
-
-const servicesContent = [
-  {
-    logo: <ApplianceSVG />,
-    title: "Modern Appliances",
-    desc: "Our homes are equipped with refrigerator, washing machine & other modern appliances so your daily chores don't seem daunting and you can do them at your preferred time.",
-  },
-  {
-    logo: <HouseKeepingSVG />,
-    title: "House Keeping",
-    desc: "We know a bachelor life can get pretty hectic and sometimes messy too? Our staff ensures daily house cleaning, so you can be welcomed by a clean space after a tiring day.",
-  },
-  {
-    logo: <SafetySVG />,
-    title: "Safety First",
-    desc: "Our homes are located in gated societies across the city, so you will always find one closer to your office. Unlike PG/hostels, gated societies are much safer so you can live stress-free.",
-  },
-  {
-    logo: <ServiceRequestSVG />,
-    title: "Service Requests",
-    desc: "We fix everything at home (except broken hearts ;), so you can laze around in your PJs. Just raise a service request from the app and leave it to our maintenance team to fix them.",
-  },
-  {
-    logo: <ConvenienceSVG />,
-    title: "Convenience",
-    desc: "From online payments to doorstep agreement, we love to spoil you by adding convenience at every stage. We may technically be your landlords but not a pesty one for sure.",
-  },
-  {
-    logo: <AccommodationSVG />,
-    title: "Affordable Accommodation",
-    desc: "Moving into a new city or a new home can be daunting and financially exhausting. We therefore make it easy on the pocket with Zero brokerage & just 2 months deposit.",
-  },
-];
+import { servicesContent } from "@/app/utils/Data";
 
 const Services = () => {
   return (

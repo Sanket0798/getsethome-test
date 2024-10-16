@@ -1,24 +1,7 @@
 "use client";
 import React from "react";
 import Image from "next/image";
-
-const workingContent = [
-  {
-    number: "01.",
-    title: "Rent a House close to your office/college",
-    desc: "We have accommodations spread across the city, especially close to railway or metro stations OR close proximity to popular offices and college, so you are always close to a GetSetHome. So explore and select a home that suits you.",
-  },
-  {
-    number: "02.",
-    title: "Free Assisted Visit",
-    desc: "Once you shortlist you can visit a property before booking your stay. We provide guided visits to our properties to ensure it ticks all boxes of your Wishlist so you can book with full trust and confidence.",
-  },
-  {
-    number: "03.",
-    title: "Get, Set, Move-in",
-    desc: "Book your preferred No brokerage home by paying just the token amount. The team will help you with the rest of KYC and balance payable so you can enjoy a seamless move-in to a GetSetHome property.",
-  },
-];
+import { workingContent } from "@/app/utils/Data";
 
 const Working = () => {
   return (
