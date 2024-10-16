@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import React from "react";
 import Image from "next/image";
 
@@ -14,28 +14,6 @@ const aboutContent = [
   {
     title: "Best Budget Accommodations",
     desc: "GetSetHome homes are fully furnished with a living area, functional kitchen & modern appliances. You can simply move in with your luggage and choose to rent an entire house, a private room or shared rooms like Twin or Triple Sharing. We cater to a wide range of budgets, ensuring there's something suitable for everyone.",
-  },
-];
-
-const imgGroup1 = [
-  {
-    id: 1,
-    img: "/assets/HomePage/About/budget-accommodations.png",
-  },
-  {
-    id: 1,
-    img: "/assets/HomePage/About/all-inclusive-rent.png",
-  },
-];
-
-const imgGroup2 = [
-  {
-    id: 1,
-    img: "/assets/HomePage/About/no-brokerage-homes.png",
-  },
-  {
-    id: 1,
-    img: "/assets/HomePage/About/rental.png",
   },
 ];
 
@@ -63,18 +41,44 @@ const About = () => {
         </div>
 
         <div className="flex flex-row w-[575px] h-full">
-          {/* <div className="flex flex-col">{imgGroup1.map((value, index) => (
-            <div key={index}>
+          <div className="relative w-full h-screen ">
+            <div className="absolute top-14 left-[100px] w-1/4 aspect-square rounded-full overflow-hidden">
               <Image
-              // width={20}
-              // height={20}
-              fill
-              alt=""
-              className="w-auto h-auto object-cover"
-              src={value.img}
+                src="/assets/HomePage/About/budget-accommodations.png"
+                alt="Person sitting"
+                width={200}
+                height={200}
+                className="object-cover"
               />
             </div>
-          ))}</div> */}
+            <div className="absolute right-[5px] w-[282px] h-[307px] aspect-square rounded-full overflow-hidden">
+              <Image
+                src="/assets/HomePage/About/no-brokerage-homes.png"
+                alt="Person walking"
+                width={400}
+                height={400}
+                className="object-cover"
+              />
+            </div>
+            <div className="absolute bottom-[150px] left-6 w-[282px] h-[260px] aspect-square rounded-full overflow-hidden">
+              <Image
+                src="/assets/HomePage/About/all-inclusive-rent.png"
+                alt="Person holding smartphone"
+                width={400}
+                height={400}
+                className="object-cover"
+              />
+            </div>
+            <div className="absolute bottom-[200px] right-[50px] w-1/4 aspect-square rounded-full overflow-hidden">
+              <Image
+                src="/assets/HomePage/About/rental.png"
+                alt="Person with braided hair"
+                width={200}
+                height={200}
+                className="object-cover"
+              />
+            </div>
+          </div>
         </div>
       </section>
     </div>
