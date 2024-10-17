@@ -3,7 +3,7 @@ import { servicesContent } from "@/app/utils/Data";
 
 const Services = () => {
   return (
-    <section className="w-auto md:w-[768px] lg:w-1200 mx-auto h-auto md:h-[945px] py-[20px] md:py-[60px] px-[10px] md:px-0">
+    <section className="w-auto md:w-[768px] lg:w-1200 mx-auto h-auto md:h-[945px] py-[20px] md:py-[60px] px-[20px] md:px-0">
       <div className="w-full h-full flex flex-col justify-between">
         <h2 className="text-black font-extrabold text-[35px] md:text-[42px] leading-[40px] md:leading-[50px] text-center">
           Meet the easier side of <span className="text-[#6B31E7]">living</span>

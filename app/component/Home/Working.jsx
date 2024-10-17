@@ -5,7 +5,7 @@ import { workingContent } from "@/app/utils/Data";
 
 const Working = () => {
   return (
-    <section className="w-auto md:w-[768px] lg:w-1200 mx-auto h-auto md:h-[644px] py-[20px] md:py-[60px] px-[10px] md:px-0">
+    <section className="w-auto md:w-[768px] lg:w-1200 mx-auto h-auto md:h-[644px] py-[20px] md:py-[60px] px-[20px] md:px-0">
       <div className="flex flex-col md:flex-row gap-y-[20px] md:gap-y-0 w-auto md:w-[768px] lg:w-full h-full justify-between">
         <Image
           width={587}

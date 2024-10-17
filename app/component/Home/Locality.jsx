@@ -2,6 +2,7 @@
 import React, { useState, useCallback, useMemo } from "react";
 import Image from "next/image";
 import { locations } from "@/app/utils/Data";
+import { LeftArrowSVG, RightArrowSVG } from "@/public/assets/HomePage/Svg";
 
 const Locality = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -22,7 +23,7 @@ const Locality = () => {
       locations.map((location, index) => (
         <div
           key={location.title}
-          className="w-[380px] h-[230px] flex-shrink-0 relative rounded-[30px] overflow-hidden group"
+          className="w-[350px] md:w-[380px] h-[230px] flex-shrink-0 relative rounded-[30px] overflow-hidden group"
         >
           <Image
             src={location.image}
@@ -32,7 +33,7 @@ const Locality = () => {
             className="object-cover absolute inset-0 transition-transform duration-300 ease-in-out group-hover:scale-110"
           />
           <div className="absolute inset-0 bg-white bg-opacity-90" />
-          <div className="absolute inset-0 flex flex-col justify-between pt-[35px] px-[20px] pb-[20px]">
+          <div className="absolute w-auto md:w-[380px] inset-0 flex flex-col justify-between pt-[35px] px-[20px] pb-[20px]">
             <h2
               className="text-[45px] font-extrabold text-transparent bg-clip-text bg-center bg-cover h-[90px] leading-[42px] text-center transition-all duration-300 ease-in-out"
               style={{
@@ -52,7 +53,7 @@ const Locality = () => {
   );
 
   return (
-    <section className="w-auto md:w-[768px] lg:w-1200 mx-auto h-[442px] flex flex-col items-center py-[60px] px-[10px] md:px-[20px] lg:px-0">
+    <section className="w-auto md:w-[768px] lg:w-1200 mx-auto h-[442px] flex flex-col items-center py-[60px] px-[20px] md:px-[20px] lg:px-0">
       <h2 className="font-extrabold text-[35px] md:text-[42px] text-black leading-[40px] md:leading-0 text-center ">
         Which area is your new <span className="text-[#6b31e7]">home</span>?
       </h2>
@@ -73,17 +74,17 @@ const Locality = () => {
           disabled={isFirstSlide}
           aria-label="Previous slide"
         >
-          &larr;
+          <LeftArrowSVG />
         </button>
         <button
           onClick={handleNext}
-          className={`absolute top-1/2 right-5 transform -translate-y-1/2 w-[40px] h-[40px] p-2 bg-purple-500 text-white rounded-full hover:bg-purple-700 transition-colors duration-300 ${
+          className={`absolute top-1/2 right-0 md:right-5 transform -translate-y-1/2 w-[40px] h-[40px] p-2 bg-purple-500 text-white rounded-full hover:bg-purple-700 transition-colors duration-300 ${
             isLastSlide ? "opacity-50 cursor-not-allowed" : ""
           }`}
           disabled={isLastSlide}
           aria-label="Next slide"
         >
-          &rarr;
+          <RightArrowSVG />
         </button>
       </div>
     </section>
