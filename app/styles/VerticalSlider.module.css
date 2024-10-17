@@ -1,0 +1,14 @@
+/* components/VerticalSlider.module.css */
+
+.sliderWrapper {
+  width: 504px;
+  height: 495px;
+}
+
+.slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 504px;
+  height: 495px;
+}

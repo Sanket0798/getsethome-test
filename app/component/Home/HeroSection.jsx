@@ -3,8 +3,23 @@ import React from "react";
 import Image from "next/image";
 import { HeroItems } from "@/app/utils/Data";
 import { GradientButton } from "../ui/Button";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import styles from "../../styles/VerticalSlider.module.css";
 
 const HeroSection = () => {
+  const settings = {
+    infinite: true,
+    speed: 1000,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    vertical: true,
+    autoplay: true,
+    autoplaySpeed: 2000,
+    arrows: false,
+  };
+
   return (
     <div className="relative">
       <div className="bg-no-repeat bg-hero w-full bg-cover bg-center h-[690px]">
@@ -14,14 +29,26 @@ const HeroSection = () => {
             Near your College Location
           </h1>
           <div className="w-full h-[508px] flex md:items-center md:justify-center lg:items-end lg:justify-between">
-            <Image
-              src="/assets/HomePage/HeroSection/Img5.png"
-              alt="Student accommodation"
-              width={504}
-              height={495}
-              className="object-cover z-10"
-              priority
-            />
+            <div className={styles.sliderWrapper}>
+              <Slider {...settings}>
+                {[
+                  "/assets/HomePage/HeroSection/Img5.png",
+                  "/assets/HomePage/HeroSection/Img6.png",
+                  "/assets/HomePage/HeroSection/Img7.png",
+                  "/assets/HomePage/HeroSection/Img8.png",
+                ].map((src, index) => (
+                  <div className={styles.slide} key={index}>
+                    <Image
+                      src={src}
+                      alt="Student accommodation"
+                      width={504}
+                      height={495}
+                      priority
+                    />
+                  </div>
+                ))}
+              </Slider>
+            </div>
             <div className="hidden lg:flex flex-col items-start gap-y-[20px] w-[600px] h-full">
               {HeroItems.map((value) => (
                 <div
