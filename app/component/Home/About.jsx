@@ -5,7 +5,7 @@ import { aboutContent } from "@/app/utils/Data";
 
 const About = () => {
   return (
-    <div className="w-[360px] md:w-[768px] lg:w-full h-[810px] md:h-[744px] bg-[#EDDBDB] py-[20px] md:py-[60px] px-[10px] md:px-[20px] lg:px-0">
+    <div className="w-auto md:w-[768px] lg:w-full h-[810px] md:h-[744px] bg-[#EDDBDB] py-[20px] md:py-[60px] px-[10px] md:px-[20px] lg:px-0">
       <section className="w-1200 mx-auto flex flex-col md:flex-row items-start justify-between h-full">
         <div className="flex flex-col items-start">
           <p className="text-black font-extrabold md:text-[42px] w-[340px] md:w-[575px] md:leading-[50px] text-[35px] leading-[40px]">
@@ -17,7 +17,9 @@ const About = () => {
               <h4 className="text-[20px] md:text-[24px] text-black font-extrabold mt-[40px] mb-[15px] h-[28px]">
                 {title}
               </h4>
-              <p className="text-[12px] md:text-[14px] text-[#555] leading-[25px] w-[340px] md:w-full">{desc}</p>
+              <p className="text-[12px] md:text-[14px] text-[#555] leading-[25px] w-[340px] md:w-full">
+                {desc}
+              </p>
             </div>
           ))}
         </div>
