@@ -22,7 +22,7 @@ const HeroSection = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
     vertical: true,
-    // autoplay: true,
+    autoplay: true,
     autoplaySpeed: 2000,
     arrows: false,
     beforeChange: handleBeforeChange,
