@@ -1,6 +1,11 @@
 "use client";
 import React, { useState, useCallback, useMemo } from "react";
 import { storiesComment } from "@/app/utils/Data";
+import {
+  LeftArrowSVG,
+  RightArrowSVG,
+  StoriesSVG,
+} from "@/public/assets/HomePage/Svg";
 
 const Stories = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -38,14 +43,17 @@ const Stories = () => {
   );
 
   return (
-    <section className="w-auto flex h-[450px] bg-gradient-to-r from-gradient-purple-1 via-gradient-purple-3 to-gradient-purple-5 py-[100px]">
-      <h2 className="text-[25px] text-white uppercase leading-[35px] font-extrabold w-[434px]">
-        Stories from those <br />
-        who{" "}
-        <span className="text-[30px] text-[#78EDEE] font-extrabold">
-          Love Us!
-        </span>
-      </h2>
+    <section className="w-auto flex flex-row h-[450px] bg-gradient-to-r from-gradient-purple-1 via-gradient-purple-3 to-gradient-purple-5 py-[100px]">
+      <div className="relative bottom-[60px] pl-[40px]">
+        <StoriesSVG />
+        <h2 className="text-[25px] text-white uppercase leading-[35px] font-extrabold w-[434px]">
+          Stories from those <br />
+          who{" "}
+          <span className="text-[30px] text-[#78EDEE] font-extrabold">
+            Love Us!
+          </span>
+        </h2>
+      </div>
 
       <div className="relative w-full h-[250px] overflow-hidden">
         <div
@@ -58,17 +66,17 @@ const Stories = () => {
         {/* Navigation Buttons */}
         <button
           onClick={handlePrev}
-          className={`absolute top-1/2 left-2 transform -translate-y-1/2 p-2 bg-purple-500 text-white rounded-full hover:bg-purple-700 transition-colors duration-300 ${
+          className={`absolute top-1/2 left-2 w-[40px] h-[40px] transform -translate-y-1/2 p-2 bg-purple-500 text-white rounded-full hover:bg-purple-700 transition-colors duration-300 ${
             currentSlide === 0 ? "opacity-50 cursor-not-allowed" : ""
           }`}
           disabled={currentSlide === 0}
           aria-label="Previous slide"
         >
-          &larr;
+          <LeftArrowSVG />
         </button>
         <button
           onClick={handleNext}
-          className={`absolute top-1/2 right-2 transform -translate-y-1/2 p-2 bg-purple-500 text-white rounded-full hover:bg-purple-700 transition-colors duration-300 ${
+          className={`absolute top-1/2 right-2 w-[40px] h-[40px] transform -translate-y-1/2 p-2 bg-purple-500 text-white rounded-full hover:bg-purple-700 transition-colors duration-300 ${
             currentSlide === totalSlides - 1
               ? "opacity-50 cursor-not-allowed"
               : ""
@@ -76,7 +84,7 @@ const Stories = () => {
           disabled={currentSlide === totalSlides - 1}
           aria-label="Next slide"
         >
-          &rarr;
+          <RightArrowSVG />
         </button>
       </div>
     </section>

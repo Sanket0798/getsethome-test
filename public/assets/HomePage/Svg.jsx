@@ -447,6 +447,62 @@ export const LoveSVG = () => {
   );
 };
 
+export const LeftArrowSVG = () => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke-width="1.5"
+      stroke="currentColor"
+      class="size-6"
+    >
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        d="M15.75 19.5 8.25 12l7.5-7.5"
+      />
+    </svg>
+  );
+};
+
+export const RightArrowSVG = () => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke-width="1.5"
+      stroke="currentColor"
+      class="size-6"
+    >
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        d="m8.25 4.5 7.5 7.5-7.5 7.5"
+      />
+    </svg>
+  );
+};
+
+export const StoriesSVG = () => {
+  return (
+    <svg
+      width="201"
+      height="139"
+      viewBox="0 0 201 139"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      className="opacity-60"
+    >
+      <path
+        d="M44.2028 50.9312C68.3417 50.9312 87.9101 70.5 87.9101 94.6385C87.9101 118.777 68.3417 138.346 44.2028 138.346C20.0638 138.346 0.495445 118.777 0.495445 94.6385L0.300323 88.3946C0.300323 40.1168 39.4371 0.97998 87.715 0.97998V25.9556C71.0371 25.9556 55.3571 32.4504 43.5639 44.2436C41.3153 46.4921 39.2392 48.9067 37.3532 51.467C39.585 51.1158 41.8722 50.9312 44.2028 50.9312ZM156.593 50.9312C180.732 50.9312 200.3 70.5 200.3 94.6385C200.3 118.777 180.732 138.346 156.593 138.346C132.454 138.346 112.886 118.777 112.886 94.6385L112.691 88.3946C112.691 40.1168 151.827 0.97998 200.105 0.97998V25.9556C183.428 25.9556 167.747 32.4504 155.954 44.2436C153.705 46.492 151.629 48.9066 149.743 51.467C152.009 51.1103 154.299 50.9311 156.593 50.9312Z"
+        fill="#C06CDF"
+      />
+    </svg>
+  );
+};
+
 export const FooterLogoSVG = () => {
   return (
     <svg
