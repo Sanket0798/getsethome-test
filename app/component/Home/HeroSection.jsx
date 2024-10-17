@@ -7,26 +7,52 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import styles from "../../styles/VerticalSlider.module.css";
+import { useState } from "react";
 
 const HeroSection = () => {
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  const handleBeforeChange = (oldIndex, newIndex) => {
+    setCurrentSlide(newIndex);
+  };
+
   const settings = {
     infinite: true,
-    speed: 1000,
+    speed: 1500,
     slidesToShow: 1,
     slidesToScroll: 1,
     vertical: true,
     autoplay: true,
     autoplaySpeed: 2000,
     arrows: false,
+    beforeChange: handleBeforeChange,
   };
+
+  const slideTitles = [
+    <>
+      Student Accommodation, <br />
+      Near your College Location
+    </>,
+    <>
+      Stay in a Shared Space, <br />
+      Near your Workplace
+    </>,
+    <>
+      Renting Home, <br />
+      made simple
+    </>,
+    <>
+      Co-Living place, <br />
+      that gives you your space
+    </>,
+  ];
 
   return (
     <div className="relative">
       <div className="bg-no-repeat bg-hero w-full bg-cover bg-center h-[690px]">
         <div className="max-w-[1200px] w-full mx-auto flex flex-col items-center justify-between h-full">
           <h1 className="font-extrabold text-[35px] md:text-[42px] text-black text-center leading-[40px] md:leading-[50px] mt-[40px]">
-            Student Accommodation, <br />
-            Near your College Location
+            {slideTitles[currentSlide]}
           </h1>
           <div className="w-full h-[508px] flex md:items-center md:justify-center lg:items-end lg:justify-between">
             <div className={styles.sliderWrapper}>
