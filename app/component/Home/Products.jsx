@@ -77,18 +77,6 @@ const Products = () => {
             />
           </div>
 
-          {/* <div className="md:w-1/3 mt-8 md:mt-0 relative">
-            <div className="absolute right-[-227%] -top-[80px] w-[585px] h-[387px]">
-              <Image
-                src="/assets/HomePage/Products/owner.png"
-                alt="Person sitting in a chair reading"
-                width={585}
-                height={387}
-                className="object-cover"
-              />
-            </div>
-          </div> */}
-
           <div className="w-full md:w-1/3 md:mt-0 relative">
             <div className="md:absolute md:right-[-225%] md:top-[-80px] w-full md:w-[585px] h-auto md:h-[387px]">
               <Image
