@@ -1,7 +1,8 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import {
+  CloseSVG,
   DownArrowSVG,
   NavbarMenuSVG,
   NavbarPhoneSVG,
@@ -10,10 +11,33 @@ import { GradientButton } from "../ui/Button";
 
 const Navbar = () => {
   const [isSidePanelOpen, setIsSidePanelOpen] = useState(false);
+  const sidePanelRef = useRef(null);
 
   const toggleSidePanel = () => {
     setIsSidePanelOpen(!isSidePanelOpen);
   };
+
+  // Effect to handle clicks outside the side panel
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (
+        sidePanelRef.current &&
+        !sidePanelRef.current.contains(event.target)
+      ) {
+        setIsSidePanelOpen(false);
+      }
+    };
+
+    if (isSidePanelOpen) {
+      document.addEventListener("mousedown", handleClickOutside);
+    } else {
+      document.removeEventListener("mousedown", handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [isSidePanelOpen]);
 
   return (
     <nav className="bg-white w-full h-[75px] flex items-center shadow-[0_3px_10px_0_rgba(0,0,0,.05)] px-[10px] md:px-[20px] lg:px-0">
@@ -40,43 +64,75 @@ const Navbar = () => {
             List Your Property
           </button>
           <GradientButton text="Sign Up" width="72px" height="35px" />
-          <button onClick={toggleSidePanel} aria-label="Open menu" className="md:hidden lg:block">
+          <button
+            onClick={toggleSidePanel}
+            aria-label="Open menu"
+            className="md:hidden lg:block"
+          >
             <NavbarMenuSVG />
           </button>
         </div>
 
         {/* Side Panel */}
         <div
+          ref={sidePanelRef}
           className={`fixed top-0 right-0 h-full w-64 bg-white shadow-lg transform transition-transform duration-300 ease-in-out ${
             isSidePanelOpen ? "translate-x-0" : "translate-x-full"
           }`}
         >
-          <div className="p-4">
-            <button
-              onClick={toggleSidePanel}
-              className="mb-4 text-gray-600 hover:text-gray-800"
-            >
-              Close
+          <div className="p-[20px] w-auto h-auto">
+            <button onClick={toggleSidePanel} className="mb-4 ">
+              <div className="w-[200px] flex items-end justify-end">
+                <CloseSVG />
+              </div>
             </button>
             <ul>
-              <li className="mb-2">
-                <a href="#" className="text-gray-600 hover:text-gray-800">
-                  Home
+              <li className="my-[15px]">
+                <a
+                  href="#"
+                  className="text-[#7185A1] text-[14px] font-extrabold hover:text-[#6b31e7]"
+                >
+                  Help center
                 </a>
               </li>
-              <li className="mb-2">
-                <a href="#" className="text-gray-600 hover:text-gray-800">
-                  About
+              <li className="my-[15px]">
+                <a
+                  href="#"
+                  className="text-[#7185A1] text-[14px] font-extrabold hover:text-[#6b31e7]"
+                >
+                  Tenancy policy
                 </a>
               </li>
-              <li className="mb-2">
-                <a href="#" className="text-gray-600 hover:text-gray-800">
-                  Services
+              <li className="my-[15px]">
+                <a
+                  href="#"
+                  className="text-[#7185A1] text-[14px] font-extrabold hover:text-[#6b31e7]"
+                >
+                  Terms and Conditions
                 </a>
               </li>
-              <li className="mb-2">
-                <a href="#" className="text-gray-600 hover:text-gray-800">
-                  Contact
+              <li className="my-[15px]">
+                <a
+                  href="#"
+                  className="text-[#7185A1] text-[14px] font-extrabold hover:text-[#6b31e7]"
+                >
+                  Privacy policy
+                </a>
+              </li>
+              <li className="my-[15px]">
+                <a
+                  href="#"
+                  className="text-[#7185A1] text-[14px] font-extrabold hover:text-[#6b31e7]"
+                >
+                  About us
+                </a>
+              </li>
+              <li className="my-[15px]">
+                <a
+                  href="#"
+                  className="text-[#7185A1] text-[14px] font-extrabold hover:text-[#6b31e7]"
+                >
+                  Contact us
                 </a>
               </li>
             </ul>
