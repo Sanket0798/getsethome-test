@@ -15,8 +15,8 @@ const Footer = () => {
   const activeTabContent = useMemo(() => content[activeTab], [activeTab]);
 
   return (
-    <footer className="w-full bg-[#F9F9F9] flex flex-col items-center">
-      <div className="w-full py-5 bg-[#F1F1F1]">
+    <footer className="w-auto md:w-[768px] lg:w-full bg-[#F9F9F9] flex flex-col items-center">
+      <div className="w-full py-5 bg-[#F1F1F1] px-[20px] md:px-0">
         <div className="max-w-[1200px] mx-auto">
           <div className="flex gap-x-5 border-b-2 justify-center">
             {tabs.map((tab) => (
@@ -39,12 +39,12 @@ const Footer = () => {
       </div>
 
       <div className="flex items-center  w-full justify-center h-[110px]">
-        <div className=" bg-[#CCCCCC] w-[700px] h-[1px]"></div>
+        <div className=" bg-[#CCCCCC] w-[100px] md:w-[700px] h-[1px]"></div>
         <FooterLogoSVG />
-        <div className=" bg-[#CCCCCC] w-[700px] h-[1px]"></div>
+        <div className=" bg-[#CCCCCC] w-[100px] md:w-[700px] h-[1px]"></div>
       </div>
 
-      <p className="w-[1100px] h-[120px] text-[#555555] text-[14px] leading-[24px] text-center">
+      <p className="w-auto px-[20px] md:px-0 md:w-[1100px] h-auto md:h-[120px] text-[#555555] text-[14px] leading-[24px] text-center">
         GetSetHome offers full homes and shared homes on rent with No Brokerage.
         Our aim is to provide a seamless rental experience with the help of
         technology and new processes to eliminate the hassles of house hunting
@@ -57,7 +57,7 @@ const Footer = () => {
         Photos and Book Online. #LetsGetYouAHome
       </p>
 
-      <div className="flex gap-x-[15px] mt-[30px]">
+      <div className="flex flex-wrap items-center justify-center gap-x-[15px] mt-[30px] px-[20px] md:px-0 w-full h-auto md:h-[41px] md:w-[720px]">
         {footerLink1.map((value, index) => (
           <ul key={index}>
             <li className="p-[10px] font-extrabold text-[#555555] text-[14px] cursor-pointer">
@@ -82,7 +82,7 @@ const Footer = () => {
         ))}
       </div>
 
-      <div className="flex gap-x-[15px] mt-[30px]">
+      <div className="flex flex-wrap items-center justify-center gap-x-[15px] mt-[30px] px-[20px] md:px-0 w-full h-auto md:h-[41px] md:w-[725px]">
         {footerLink2.map((value, index) => (
           <ul key={index}>
             <li className="p-[10px] font-extrabold text-[#555555] text-[14px] cursor-pointer">
@@ -92,7 +92,7 @@ const Footer = () => {
         ))}
       </div>
 
-      <p className="text-[14px] text-[#555] flex items-center w-[1100px] mx-auto justify-end mt-[30px]">
+      <p className="text-[14px] text-[#555] flex items-center w-full md:w-[1100px] mx-auto justify-end mt-[15px] mb-[10px] md:mb-0 md:mt-[30px] px-[20px] md:px-0">
         Made with{" "}
         <span className="mx-[3px]">
           <LoveSVG />

@@ -150,7 +150,7 @@ export const content = {
   MUMBAI: (
     <>
       <div className="flex justify-between mt-[10px]">
-        <div className="">
+        <div className="w-[110px] md:w-auto">
           <h3 className="text-[12px] text-[#666666] font-extrabold hover:text-[#4a90e2] cursor-pointer py-[5px]">
             Flat on rent in Mumbai
           </h3>
@@ -197,7 +197,7 @@ export const content = {
             </li>
           </ul>
         </div>
-        <div className="">
+        <div className="w-[140px] md:w-auto">
           <h3 className="text-[12px] text-[#666666] font-extrabold hover:text-[#4a90e2] cursor-pointer py-[5px]">
             No Brokerage Homes in Mumbai
           </h3>
@@ -423,7 +423,7 @@ export const content = {
     <>
       <div className="flex justify-between mt-[10px]">
         <div className="">
-          <h3 className="text-[12px] text-[#666666] font-extrabold hover:text-[#4a90e2] cursor-pointer py-[5px]">
+          <h3 className="text-[12px] text-[#666666] font-extrabold hover:text-[#4a90e2] cursor-pointer py-[5px] w-[110px] md:w-auto">
             Flat For rent in Navi Mumbai
           </h3>
           <ul className="text-[12px] text-[#333333]">
