@@ -43,7 +43,7 @@ const Stories = () => {
   );
 
   return (
-    <section className="w-auto flex flex-row h-[450px] bg-gradient-to-r from-gradient-purple-1 via-gradient-purple-3 to-gradient-purple-5 py-[100px]">
+    <section className="hidden w-auto md:flex flex-row h-[450px] bg-gradient-to-r from-gradient-purple-1 via-gradient-purple-3 to-gradient-purple-5 py-[100px]">
       <div className="relative bottom-[60px] pl-[40px]">
         <StoriesSVG />
         <h2 className="text-[25px] text-white leading-[35px] font-extrabold w-[434px]">

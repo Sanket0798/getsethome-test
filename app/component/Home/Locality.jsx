@@ -52,7 +52,7 @@ const Locality = () => {
   );
 
   return (
-    <section className="w-[360px] md:w-[768px] lg:w-1200 mx-auto h-[442px] flex flex-col items-center py-[60px] px-[10px] md:px-[20px] lg:px-0">
+    <section className="w-auto md:w-[768px] lg:w-1200 mx-auto h-[442px] flex flex-col items-center py-[60px] px-[10px] md:px-[20px] lg:px-0">
       <h2 className="font-extrabold text-[35px] md:text-[42px] text-black leading-[40px] md:leading-0 text-center ">
         Which area is your new <span className="text-[#6b31e7]">home</span>?
       </h2>
