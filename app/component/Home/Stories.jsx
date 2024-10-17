@@ -46,9 +46,9 @@ const Stories = () => {
     <section className="w-auto flex flex-row h-[450px] bg-gradient-to-r from-gradient-purple-1 via-gradient-purple-3 to-gradient-purple-5 py-[100px]">
       <div className="relative bottom-[60px] pl-[40px]">
         <StoriesSVG />
-        <h2 className="text-[25px] text-white uppercase leading-[35px] font-extrabold w-[434px]">
-          Stories from those <br />
-          who{" "}
+        <h2 className="text-[25px] text-white leading-[35px] font-extrabold w-[434px]">
+          STORIES FROM THOSE <br />
+          WHO{" "}
           <span className="text-[30px] text-[#78EDEE] font-extrabold">
             Love Us!
           </span>
