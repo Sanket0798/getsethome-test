@@ -12,24 +12,25 @@ const Products = () => {
   };
 
   return (
-    <section className="w-1200 mx-auto h-[598px] py-[60px]">
-      <div className="flex flex-row w-full justify-between">
-        <div className="w-[585px] h-[498px] bg-[#ECDBDB] rounded-[20px] p-[44px] flex justify-between">
+    <section className="w-auto md:w-[768px] lg:w-1200 mx-auto h-auto md:h-[598px] py-[20px] md:py-[60px] px-[10px] md:px-0">
+      <div className="flex flex-col md:flex-row w-full justify-between gap-y-[20px] md:gap-y-0">
+        <div className="w-auto md:w-[585px] h-auto md:h-[498px] bg-[#ECDBDB] rounded-[20px] p-[20px] md:p-[44px] flex flex-col-reverse md:flex-row justify-between">
           <Image
             width={198}
             height={408}
             src="/assets/HomePage/Products/mobile.png"
             alt="product1"
+            className="w-full md:w-[198px] mt-[10px] md:mt-0"
           />
           <div className="flex flex-col justify-between">
             <div className="flex flex-col">
-              <h2 className="text-[28px] text-black font-extrabold leading-[38px] w-[278px]">
+              <h2 className="text-[25px] md:text-[28px] text-black font-extrabold leading-[38px] w-[278px]">
                 Renting Made APPsolutely{" "}
                 <span className="text-[#6B31E7]">Easy</span>!
               </h2>
               <form
                 onSubmit={handleSubmit}
-                className="w-[278px] h-[45px] mt-[20px]"
+                className="w-auto md:w-[278px] h-[45px] mt-[10px] md:mt-[20px]"
               >
                 <div className="flex items-center bg-white rounded-full overflow-hidden h-[45px]">
                   <input
@@ -54,13 +55,14 @@ const Products = () => {
               height={74}
               src="/assets/HomePage/Products/googlePlay.png"
               alt="googlePlay"
+              className="mt-[10px] md:mt-0"
             />
           </div>
         </div>
 
-        <div className="w-[585px] h-[498px] bg-[#DAE8EC] rounded-[20px] p-[44px]">
+        <div className="w-auto md:w-[585px] h-auto md:h-[498px] bg-[#DAE8EC] rounded-[20px] p-[20px] md:p-[44px]">
           <div className="relative z-10">
-            <h1 className="text-[28px] text-black font-extrabold">
+            <h1 className="text-[25px] md:text-[28px] text-black font-extrabold">
               Have a Property to <span className="text-[#6B31E7]">Rent</span>?
             </h1>
             <p className="text-[14px] mt-[10px] mb-[15px] leading-[22px] text-[#555]">
@@ -75,7 +77,7 @@ const Products = () => {
             />
           </div>
 
-          <div className="md:w-1/3 mt-8 md:mt-0 relative">
+          {/* <div className="md:w-1/3 mt-8 md:mt-0 relative">
             <div className="absolute right-[-227%] -top-[80px] w-[585px] h-[387px]">
               <Image
                 src="/assets/HomePage/Products/owner.png"
@@ -83,6 +85,18 @@ const Products = () => {
                 width={585}
                 height={387}
                 className="object-cover"
+              />
+            </div>
+          </div> */}
+
+          <div className="w-full md:w-1/3 md:mt-0 relative">
+            <div className="md:absolute md:right-[-225%] md:top-[-80px] w-full md:w-[585px] h-auto md:h-[387px]">
+              <Image
+                src="/assets/HomePage/Products/owner.png"
+                alt="Person sitting in a chair reading"
+                width={585}
+                height={387}
+                className="object-cover w-full h-auto"
               />
             </div>
           </div>
