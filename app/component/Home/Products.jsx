@@ -12,9 +12,9 @@ const Products = () => {
   };
 
   return (
-    <section className="w-auto md:w-[768px] lg:w-1200 mx-auto h-auto md:h-[598px] py-[20px] md:py-[60px] px-[20px] md:px-0">
-      <div className="flex flex-col md:flex-row w-full justify-between gap-y-[20px] md:gap-y-0">
-        <div className="w-auto md:w-[585px] h-auto md:h-[498px] bg-[#ECDBDB] rounded-[20px] p-[20px] md:p-[44px] flex flex-col-reverse md:flex-row justify-between">
+    <section className="w-auto md:w-[768px] lg:w-1200 mx-auto h-auto lg:h-[598px] py-[20px] lg:py-[60px] px-[20px] lg:px-0 ">
+      <div className="flex flex-col lg:flex-row w-full justify-between gap-y-[20px] lg:gap-y-0">
+        <div className="w-auto lg:w-[585px] h-auto md:h-[498px] bg-[#ECDBDB] rounded-[20px] p-[20px] md:p-[44px] flex flex-col-reverse md:flex-row justify-between">
           <Image
             width={198}
             height={408}
@@ -60,7 +60,7 @@ const Products = () => {
           </div>
         </div>
 
-        <div className="w-auto md:w-[585px] h-auto md:h-[498px] bg-[#DAE8EC] rounded-[20px] p-[20px] md:p-[44px]">
+        <div className="w-auto lg:w-[585px] h-auto md:h-[498px] bg-[#DAE8EC] rounded-[20px] p-[20px] md:p-[44px]">
           <div className="relative z-10">
             <h1 className="text-[25px] md:text-[28px] text-black font-extrabold">
               Have a Property to <span className="text-[#6B31E7]">Rent</span>?

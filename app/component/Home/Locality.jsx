@@ -78,7 +78,7 @@ const Locality = () => {
         </button>
         <button
           onClick={handleNext}
-          className={`absolute top-1/2 right-0 md:right-5 transform -translate-y-1/2 w-[40px] h-[40px] p-2 bg-purple-500 text-white rounded-full hover:bg-purple-700 transition-colors duration-300 ${
+          className={`absolute top-1/2 right-0 lg:right-5 transform -translate-y-1/2 w-[40px] h-[40px] p-2 bg-purple-500 text-white rounded-full hover:bg-purple-700 transition-colors duration-300 ${
             isLastSlide ? "opacity-50 cursor-not-allowed" : ""
           }`}
           disabled={isLastSlide}

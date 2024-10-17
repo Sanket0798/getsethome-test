@@ -39,12 +39,12 @@ const Footer = () => {
       </div>
 
       <div className="flex items-center  w-full justify-center h-[110px]">
-        <div className=" bg-[#CCCCCC] w-[100px] md:w-[700px] h-[1px]"></div>
+        <div className=" bg-[#CCCCCC] w-[100px] lg:w-[700px] h-[1px]"></div>
         <FooterLogoSVG />
-        <div className=" bg-[#CCCCCC] w-[100px] md:w-[700px] h-[1px]"></div>
+        <div className=" bg-[#CCCCCC] w-[100px] lg:w-[700px] h-[1px]"></div>
       </div>
 
-      <p className="w-auto px-[20px] md:px-0 md:w-[1100px] h-auto md:h-[120px] text-[#555555] text-[14px] leading-[24px] text-center">
+      <p className="w-auto px-[20px] lg:px-0 lg:w-[1100px] h-auto lg:h-[120px] text-[#555555] text-[14px] leading-[24px] text-center">
         GetSetHome offers full homes and shared homes on rent with No Brokerage.
         Our aim is to provide a seamless rental experience with the help of
         technology and new processes to eliminate the hassles of house hunting
@@ -92,7 +92,7 @@ const Footer = () => {
         ))}
       </div>
 
-      <p className="text-[14px] text-[#555] flex items-center w-full md:w-[1100px] mx-auto justify-end mt-[15px] mb-[10px] md:mb-0 md:mt-[30px] px-[20px] md:px-0">
+      <p className="text-[14px] text-[#555] flex items-center w-full lg:w-[1100px] mx-auto justify-end mt-[15px] mb-[10px] md:mb-0 md:mt-[30px] px-[20px] lg:px-0">
         Made with{" "}
         <span className="mx-[3px]">
           <LoveSVG />

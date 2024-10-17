@@ -149,7 +149,7 @@ export const tabs = [
 export const content = {
   MUMBAI: (
     <>
-      <div className="flex justify-between mt-[10px]">
+      <div className="flex justify-between mt-[10px] md:px-[20px] lg:px-0">
         <div className="w-[110px] md:w-auto">
           <h3 className="text-[12px] text-[#666666] font-extrabold hover:text-[#4a90e2] cursor-pointer py-[5px]">
             Flat on rent in Mumbai
