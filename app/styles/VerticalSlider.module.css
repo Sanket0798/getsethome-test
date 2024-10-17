@@ -1,14 +1,51 @@
 /* components/VerticalSlider.module.css */
 
-.sliderWrapper {
-  width: 504px;
-  height: 495px;
+/* Code for Responsive Design */
+
+/* Example for small devices */
+@media (min-width: 360px) {
+  .sliderWrapper {
+    width: auto;
+    height: auto;
+  }
+  
+  .slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: auto;
+  }
 }
 
-.slide {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 504px;
-  height: 495px;
+/* Example for medium devices */
+@media (min-width: 768px) {
+  .sliderWrapper {
+    width: 504px;
+    height: 495px;
+  }
+
+  .slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 504px;
+    height: 495px;
+  }
+}
+
+/* Example for larger devices */
+@media (min-width: 1024px) {
+  .sliderWrapper {
+    width: 504px;
+    height: 495px;
+  }
+
+  .slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 504px;
+    height: 495px;
+  }
 }

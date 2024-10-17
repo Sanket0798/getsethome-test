@@ -22,7 +22,7 @@ const HeroSection = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
     vertical: true,
-    autoplay: true,
+    // autoplay: true,
     autoplaySpeed: 2000,
     arrows: false,
     beforeChange: handleBeforeChange,
@@ -54,7 +54,7 @@ const HeroSection = () => {
           <h1 className="font-extrabold text-[35px] md:text-[42px] text-black text-center leading-[40px] md:leading-[50px] mt-[40px]">
             {slideTitles[currentSlide]}
           </h1>
-          <div className="w-full h-[508px] flex md:items-center md:justify-center lg:items-end lg:justify-between">
+          <div className="w-full h-auto md:h-[508px] flex md:items-center md:justify-center lg:items-end lg:justify-between">
             <div className={styles.sliderWrapper}>
               <Slider {...settings}>
                 {[
@@ -70,6 +70,7 @@ const HeroSection = () => {
                       width={504}
                       height={495}
                       priority
+                      className="w-[390px] md:w-full h-auto"
                     />
                   </div>
                 ))}
